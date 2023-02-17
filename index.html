@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>联合招新・现场抽奖</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="./js/script.js"></script>
+</head>
+
+<body>
+  <input id="file-input" type="file" accept=".csv" />
+  <div class="logo">
+    <img src="./img/logo.png" alt="logo">
+  </div>
+  <div class="result hide">
+    <span class="student-name">？？？</span>
+    <span class="student-id">??????????</span>
+  </div>
+  <div class="btn-container">
+    <button id="btn" class="btn" onclick="drawPrize()">抽奖</button>
+  </div>
+
+  <script>
+    var fileInput = document.getElementById('file-input');
+
+    fileInput.addEventListener('change', function (e) {
+      var file = fileInput.files[0];
+      var reader = new FileReader();
+      reader.onload = function (e) {
+        var fileContent = e.target.result;
+        parseCSVAndSaveToVar(fileContent);
+      };
+      reader.readAsText(file, 'GB2312');
+      // hide file input
+      fileInput.style.display = 'none';
+    });
+
+  </script>
+</body>
+
+</html>

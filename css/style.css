@@ -1,0 +1,65 @@
+@font-face {
+  font-family: "点字倔强黑";
+  src: url(../font/点字倔强黑.ttf);
+}
+
+body {
+  background-color: #000000;
+}
+
+.logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.result {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 200px;
+  border: 2px solid #2e4e7e;
+  border-radius: 6px;
+  background-color: #425066;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 48px;
+  font-family: "点字倔强黑";
+  color: white;
+}
+
+.result.hide {
+  display: none;
+}
+
+.btn-container {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.btn {
+  width: 200px;
+  font-family: "点字倔强黑";
+  color: white;
+  background: transparent;
+  border: 2px solid #2e4e7e;
+  border-radius: 6px;
+  text-align: center;
+  display: inline-block;
+  font-size: 32px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #425066;
+  color: white;
+}
